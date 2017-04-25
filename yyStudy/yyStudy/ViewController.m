@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "YYAsyncView.h"
 @interface ViewController ()
 
 @end
@@ -16,7 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    YYAsyncView *yyV = [[YYAsyncView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    yyV.backgroundColor = [UIColor redColor];
+    [yyV setText:@"哈哈哈"];
+    [yyV setFont:[UIFont systemFontOfSize:18]];
+    [self.view addSubview:yyV];
+    
 }
 
 

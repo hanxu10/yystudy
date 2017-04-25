@@ -13,6 +13,10 @@
 		F901C49B1EAE0C8400C6CE09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F901C4991EAE0C8400C6CE09 /* Main.storyboard */; };
 		F901C49D1EAE0C8400C6CE09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F901C49C1EAE0C8400C6CE09 /* Assets.xcassets */; };
 		F901C4A01EAE0C8400C6CE09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F901C49E1EAE0C8400C6CE09 /* LaunchScreen.storyboard */; };
+		F901C4AA1EAE0DB800C6CE09 /* YYTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = F901C4A91EAE0DB800C6CE09 /* YYTransaction.m */; };
+		F901C4AD1EAE351700C6CE09 /* YYSentinel.m in Sources */ = {isa = PBXBuildFile; fileRef = F901C4AC1EAE351700C6CE09 /* YYSentinel.m */; };
+		F901C4B01EAE39D300C6CE09 /* YYAsyncLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F901C4AF1EAE39D300C6CE09 /* YYAsyncLayer.m */; };
+		F901C4B31EAEF2F700C6CE09 /* YYAsyncView.m in Sources */ = {isa = PBXBuildFile; fileRef = F901C4B21EAEF2F700C6CE09 /* YYAsyncView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,14 @@
 		F901C49C1EAE0C8400C6CE09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F901C49F1EAE0C8400C6CE09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F901C4A11EAE0C8400C6CE09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F901C4A81EAE0DB800C6CE09 /* YYTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYTransaction.h; sourceTree = "<group>"; };
+		F901C4A91EAE0DB800C6CE09 /* YYTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYTransaction.m; sourceTree = "<group>"; };
+		F901C4AB1EAE351700C6CE09 /* YYSentinel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSentinel.h; sourceTree = "<group>"; };
+		F901C4AC1EAE351700C6CE09 /* YYSentinel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYSentinel.m; sourceTree = "<group>"; };
+		F901C4AE1EAE39D300C6CE09 /* YYAsyncLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAsyncLayer.h; sourceTree = "<group>"; };
+		F901C4AF1EAE39D300C6CE09 /* YYAsyncLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYAsyncLayer.m; sourceTree = "<group>"; };
+		F901C4B11EAEF2F700C6CE09 /* YYAsyncView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAsyncView.h; sourceTree = "<group>"; };
+		F901C4B21EAEF2F700C6CE09 /* YYAsyncView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYAsyncView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 		F901C48F1EAE0C8400C6CE09 /* yyStudy */ = {
 			isa = PBXGroup;
 			children = (
+				F901C4A71EAE0D9500C6CE09 /* yyAsyncLayer */,
 				F901C4931EAE0C8400C6CE09 /* AppDelegate.h */,
 				F901C4941EAE0C8400C6CE09 /* AppDelegate.m */,
 				F901C4961EAE0C8400C6CE09 /* ViewController.h */,
@@ -67,6 +80,8 @@
 				F901C49E1EAE0C8400C6CE09 /* LaunchScreen.storyboard */,
 				F901C4A11EAE0C8400C6CE09 /* Info.plist */,
 				F901C4901EAE0C8400C6CE09 /* Supporting Files */,
+				F901C4B11EAEF2F700C6CE09 /* YYAsyncView.h */,
+				F901C4B21EAEF2F700C6CE09 /* YYAsyncView.m */,
 			);
 			path = yyStudy;
 			sourceTree = "<group>";
@@ -77,6 +92,19 @@
 				F901C4911EAE0C8400C6CE09 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F901C4A71EAE0D9500C6CE09 /* yyAsyncLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F901C4A81EAE0DB800C6CE09 /* YYTransaction.h */,
+				F901C4A91EAE0DB800C6CE09 /* YYTransaction.m */,
+				F901C4AB1EAE351700C6CE09 /* YYSentinel.h */,
+				F901C4AC1EAE351700C6CE09 /* YYSentinel.m */,
+				F901C4AE1EAE39D300C6CE09 /* YYAsyncLayer.h */,
+				F901C4AF1EAE39D300C6CE09 /* YYAsyncLayer.m */,
+			);
+			path = yyAsyncLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +138,7 @@
 				TargetAttributes = {
 					F901C48C1EAE0C8400C6CE09 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 8DW8Y7UETJ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -151,8 +180,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F901C4981EAE0C8400C6CE09 /* ViewController.m in Sources */,
+				F901C4AD1EAE351700C6CE09 /* YYSentinel.m in Sources */,
 				F901C4951EAE0C8400C6CE09 /* AppDelegate.m in Sources */,
+				F901C4AA1EAE0DB800C6CE09 /* YYTransaction.m in Sources */,
+				F901C4B01EAE39D300C6CE09 /* YYAsyncLayer.m in Sources */,
 				F901C4921EAE0C8400C6CE09 /* main.m in Sources */,
+				F901C4B31EAEF2F700C6CE09 /* YYAsyncView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +305,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8DW8Y7UETJ;
 				INFOPLIST_FILE = yyStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xx.yyStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -283,7 +318,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8DW8Y7UETJ;
 				INFOPLIST_FILE = yyStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xx.yyStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";

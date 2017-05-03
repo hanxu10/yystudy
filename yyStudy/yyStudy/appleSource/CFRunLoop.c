@@ -642,8 +642,8 @@ struct __CFRunLoop {
     volatile _per_run_data *_perRunData;              // reset for runs of the run loop
     pthread_t _pthread;
     uint32_t _winthread;
-    CFMutableSetRef _commonModes;
-    CFMutableSetRef _commonModeItems;
+    CFMutableSetRef _commonModes;//存的是被标记为commonmode的mode的名字.
+    CFMutableSetRef _commonModeItems;//每次向commonmode增加source的时候,会把该source也添加到_commonModeItems中.这样的话,_commonModeItems记录了所有加到commonmode中的source.下次,给该runloop增加一个commonmodel的时候,直接把_commonModeItems中的source拷贝到新的mode中即可.
     CFRunLoopModeRef _currentMode;
     CFMutableSetRef _modes;
     struct _block_item *_blocks_head;

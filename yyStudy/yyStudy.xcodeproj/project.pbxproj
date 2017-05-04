@@ -98,6 +98,13 @@
 		F901C5C21EB04A7C00C6CE09 /* CFXMLParser.c in Sources */ = {isa = PBXBuildFile; fileRef = F901C56E1EB04A7C00C6CE09 /* CFXMLParser.c */; };
 		F901C5C31EB04A7C00C6CE09 /* CFXMLPreferencesDomain.c in Sources */ = {isa = PBXBuildFile; fileRef = F901C5701EB04A7C00C6CE09 /* CFXMLPreferencesDomain.c */; };
 		F901C5C41EB04A7C00C6CE09 /* CFXMLTree.c in Sources */ = {isa = PBXBuildFile; fileRef = F901C5711EB04A7C00C6CE09 /* CFXMLTree.c */; };
+		F901C6CA1EB9E32D00C6CE09 /* _YYWebImageSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = F901C6C91EB9E32D00C6CE09 /* _YYWebImageSetter.m */; };
+		F901C6D01EBA147700C6CE09 /* YYWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F901C6CF1EBA147700C6CE09 /* YYWebImageManager.m */; };
+		F901C6D31EBA25DF00C6CE09 /* YYImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F901C6D21EBA25DF00C6CE09 /* YYImageCache.m */; };
+		F901C6D71EBADA7900C6CE09 /* YYCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F901C6D61EBADA7900C6CE09 /* YYCache.m */; };
+		F901C6DA1EBAE03900C6CE09 /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F901C6D91EBAE03900C6CE09 /* YYMemoryCache.m */; };
+		F901C6DD1EBB54E500C6CE09 /* YYDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F901C6DC1EBB54E500C6CE09 /* YYDiskCache.m */; };
+		F901C6E01EBB839900C6CE09 /* YYKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = F901C6DF1EBB839900C6CE09 /* YYKVStorage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -276,6 +283,20 @@
 		F901C5741EB04A7C00C6CE09 /* ForFoundationOnly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForFoundationOnly.h; sourceTree = "<group>"; };
 		F901C5751EB04A7C00C6CE09 /* TargetConditionals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetConditionals.h; sourceTree = "<group>"; };
 		F901C5EB1EB231AF00C6CE09 /* Introduce.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Introduce.h; sourceTree = "<group>"; };
+		F901C6C81EB9E32D00C6CE09 /* _YYWebImageSetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _YYWebImageSetter.h; sourceTree = "<group>"; };
+		F901C6C91EB9E32D00C6CE09 /* _YYWebImageSetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _YYWebImageSetter.m; sourceTree = "<group>"; };
+		F901C6CE1EBA147700C6CE09 /* YYWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWebImageManager.h; sourceTree = "<group>"; };
+		F901C6CF1EBA147700C6CE09 /* YYWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWebImageManager.m; sourceTree = "<group>"; };
+		F901C6D11EBA25DF00C6CE09 /* YYImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYImageCache.h; sourceTree = "<group>"; };
+		F901C6D21EBA25DF00C6CE09 /* YYImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYImageCache.m; sourceTree = "<group>"; };
+		F901C6D51EBADA7900C6CE09 /* YYCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCache.h; sourceTree = "<group>"; };
+		F901C6D61EBADA7900C6CE09 /* YYCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCache.m; sourceTree = "<group>"; };
+		F901C6D81EBAE03900C6CE09 /* YYMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMemoryCache.h; sourceTree = "<group>"; };
+		F901C6D91EBAE03900C6CE09 /* YYMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMemoryCache.m; sourceTree = "<group>"; };
+		F901C6DB1EBB54E500C6CE09 /* YYDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDiskCache.h; sourceTree = "<group>"; };
+		F901C6DC1EBB54E500C6CE09 /* YYDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDiskCache.m; sourceTree = "<group>"; };
+		F901C6DE1EBB839900C6CE09 /* YYKVStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKVStorage.h; sourceTree = "<group>"; };
+		F901C6DF1EBB839900C6CE09 /* YYKVStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKVStorage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,7 +329,8 @@
 		F901C48F1EAE0C8400C6CE09 /* yyStudy */ = {
 			isa = PBXGroup;
 			children = (
-				F901C4B41EAF220A00C6CE09 /* appleSource */,
+				F901C6D41EBAD9EC00C6CE09 /* yyCache */,
+				F901C6C71EB9E27900C6CE09 /* yyWebImage */,
 				F901C4A71EAE0D9500C6CE09 /* yyAsyncLayer */,
 				F901C4931EAE0C8400C6CE09 /* AppDelegate.h */,
 				F901C4941EAE0C8400C6CE09 /* AppDelegate.m */,
@@ -507,7 +529,37 @@
 				F901C4B81EAF220A00C6CE09 /* CFRuntime.h */,
 				F901C4B71EAF220A00C6CE09 /* CFRuntime.c */,
 			);
-			path = appleSource;
+			name = appleSource;
+			path = ../appleSource;
+			sourceTree = "<group>";
+		};
+		F901C6C71EB9E27900C6CE09 /* yyWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				F901C6C81EB9E32D00C6CE09 /* _YYWebImageSetter.h */,
+				F901C6C91EB9E32D00C6CE09 /* _YYWebImageSetter.m */,
+				F901C6CE1EBA147700C6CE09 /* YYWebImageManager.h */,
+				F901C6CF1EBA147700C6CE09 /* YYWebImageManager.m */,
+				F901C6D11EBA25DF00C6CE09 /* YYImageCache.h */,
+				F901C6D21EBA25DF00C6CE09 /* YYImageCache.m */,
+				F901C4B41EAF220A00C6CE09 /* appleSource */,
+			);
+			path = yyWebImage;
+			sourceTree = "<group>";
+		};
+		F901C6D41EBAD9EC00C6CE09 /* yyCache */ = {
+			isa = PBXGroup;
+			children = (
+				F901C6D51EBADA7900C6CE09 /* YYCache.h */,
+				F901C6D61EBADA7900C6CE09 /* YYCache.m */,
+				F901C6D81EBAE03900C6CE09 /* YYMemoryCache.h */,
+				F901C6D91EBAE03900C6CE09 /* YYMemoryCache.m */,
+				F901C6DB1EBB54E500C6CE09 /* YYDiskCache.h */,
+				F901C6DC1EBB54E500C6CE09 /* YYDiskCache.m */,
+				F901C6DE1EBB839900C6CE09 /* YYKVStorage.h */,
+				F901C6DF1EBB839900C6CE09 /* YYKVStorage.m */,
+			);
+			path = yyCache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -588,6 +640,7 @@
 			files = (
 				F901C4BA1EAF220A00C6CE09 /* CFRuntime.c in Sources */,
 				F901C5801EB04A7C00C6CE09 /* CFBuiltinConverters.c in Sources */,
+				F901C6D71EBADA7900C6CE09 /* YYCache.m in Sources */,
 				F901C5B01EB04A7C00C6CE09 /* CFSystemDirectories.c in Sources */,
 				F901C4981EAE0C8400C6CE09 /* ViewController.m in Sources */,
 				F901C5AB1EB04A7C00C6CE09 /* CFStringEncodingConverter.c in Sources */,
@@ -598,6 +651,7 @@
 				F901C5AF1EB04A7C00C6CE09 /* CFStringUtilities.c in Sources */,
 				F901C5A51EB04A7C00C6CE09 /* CFSocket.c in Sources */,
 				F901C5961EB04A7C00C6CE09 /* CFLocaleKeys.c in Sources */,
+				F901C6D31EBA25DF00C6CE09 /* YYImageCache.m in Sources */,
 				F901C59E1EB04A7C00C6CE09 /* CFPlugIn_Factory.c in Sources */,
 				F901C5A71EB04A7C00C6CE09 /* CFSortFunctions.c in Sources */,
 				F901C5A31EB04A7C00C6CE09 /* CFPropertyList.c in Sources */,
@@ -618,6 +672,7 @@
 				F901C4951EAE0C8400C6CE09 /* AppDelegate.m in Sources */,
 				F901C57A1EB04A7C00C6CE09 /* CFBasicHash.c in Sources */,
 				F901C4AA1EAE0DB800C6CE09 /* YYTransaction.m in Sources */,
+				F901C6D01EBA147700C6CE09 /* YYWebImageManager.m in Sources */,
 				F901C5A11EB04A7C00C6CE09 /* CFPlugIn.c in Sources */,
 				F901C4B91EAF220A00C6CE09 /* CFRunLoop.c in Sources */,
 				F901C5821EB04A7C00C6CE09 /* CFBundle_Grok.c in Sources */,
@@ -633,6 +688,7 @@
 				F901C5811EB04A7C00C6CE09 /* CFBundle_Binary.c in Sources */,
 				F901C5A91EB04A7C00C6CE09 /* CFStream.c in Sources */,
 				F901C5951EB04A7C00C6CE09 /* CFLocaleIdentifier.c in Sources */,
+				F901C6E01EBB839900C6CE09 /* YYKVStorage.m in Sources */,
 				F901C57D1EB04A7C00C6CE09 /* CFBinaryHeap.c in Sources */,
 				F901C5B21EB04A7C00C6CE09 /* CFTree.c in Sources */,
 				F901C58E1EB04A7C00C6CE09 /* CFDate.c in Sources */,
@@ -640,6 +696,7 @@
 				F901C59D1EB04A7C00C6CE09 /* CFPlatformConverters.c in Sources */,
 				F901C59C1EB04A7C00C6CE09 /* CFPlatform.c in Sources */,
 				F901C5C21EB04A7C00C6CE09 /* CFXMLParser.c in Sources */,
+				F901C6DD1EBB54E500C6CE09 /* YYDiskCache.m in Sources */,
 				F901C5B91EB04A7C00C6CE09 /* CFURL.c in Sources */,
 				F901C57B1EB04A7C00C6CE09 /* CFBasicHashFindBucket.m in Sources */,
 				F901C5C11EB04A7C00C6CE09 /* CFXMLNode.c in Sources */,
@@ -647,6 +704,7 @@
 				F901C5BA1EB04A7C00C6CE09 /* CFURLAccess.c in Sources */,
 				F901C5B31EB04A7C00C6CE09 /* CFUniChar.c in Sources */,
 				F901C5A21EB04A7C00C6CE09 /* CFPreferences.c in Sources */,
+				F901C6DA1EBAE03900C6CE09 /* YYMemoryCache.m in Sources */,
 				F901C5B11EB04A7C00C6CE09 /* CFTimeZone.c in Sources */,
 				F901C58C1EB04A7C00C6CE09 /* CFConcreteStreams.c in Sources */,
 				F901C5831EB04A7C00C6CE09 /* CFBundle_InfoPlist.c in Sources */,
@@ -670,6 +728,7 @@
 				F901C5BE1EB04A7C00C6CE09 /* CFVersion.c in Sources */,
 				F901C5AD1EB04A7C00C6CE09 /* CFStringEncodings.c in Sources */,
 				F901C59B1EB04A7C00C6CE09 /* CFOldStylePList.c in Sources */,
+				F901C6CA1EB9E32D00C6CE09 /* _YYWebImageSetter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,6 +889,7 @@
 				F901C4A61EAE0C8400C6CE09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

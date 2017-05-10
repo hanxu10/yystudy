@@ -8,6 +8,9 @@
 
 #import "YYDiskCache.h"
 #import <CommonCrypto/CommonCrypto.h>
+#import "YYKVStorage.h"
+#import <objc/runtime.h>
+
 
 #define Lock() dispatch_semaphore_wait(self->_lock, DISPATCH_TIME_FOREVER)
 #define Unlock() dispatch_semaphore_signal(self->_lock)

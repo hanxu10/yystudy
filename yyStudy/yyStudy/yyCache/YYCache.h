@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class YYMemoryCache,YYDiskCache;
 NS_ASSUME_NONNULL_BEGIN
 
 

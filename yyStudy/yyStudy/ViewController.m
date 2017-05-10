@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "YYAsyncView.h"
+#import <AVFoundation/AVFoundation.h>
 @interface ViewController ()
 
 @end
@@ -15,6 +16,7 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    AVPlayer *av = [AVPlayer playerWithURL:[NSURL URLWithString:@"ddd"]];
     [super viewDidLoad];
     
     YYAsyncView *yyV = [[YYAsyncView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];

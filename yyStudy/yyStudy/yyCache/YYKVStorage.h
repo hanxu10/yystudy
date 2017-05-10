@@ -6,7 +6,7 @@
 //  Copyright © 2017年 hanxu. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
   */
 @interface YYKVStorageItem : NSObject
 @property (nonatomic, strong) NSString *key;
-@property (nonatomic, strong) NSString *value;
+@property (nonatomic, strong) NSData *value;
 @property (nullable, nonatomic, strong) NSString *filename;
 @property (nonatomic) int size;//value的size(in bytes)
 @property (nonatomic) int modTime;//修改时间(unix timestamp)
@@ -124,8 +124,120 @@ typedef NS_ENUM(NSUInteger, YYKVStorageType) {
            extendedData:(nullable NSData *)extendedData;
 
 #pragma mark - Remove Items
+- (BOOL)removeItemForKey:(NSString *)key;
+- (BOOL)removeItemForKeys:(NSArray<NSString *> *)keys;
+
+/**
+   删除`value`大于指定大小的所有项目。
+  
+   @param size 最大大小（以字节为单位）。
+   @return 是否成功
+ */
+- (BOOL)removeItemsLargerThanSize:(int)size;
+
+/**
+   删除上次访问时间早于指定时间戳的所有项目。
+  
+   @param time 指定的unix时间戳。
+   @return是否成功
+ */
+- (BOOL)removeItemsEarlierThanTime:(int)time;
+
+/**
+   删除项目以使总大小不大于指定的大小。
+   最近最少使用的(LRU)项目将首先被删除。
+  
+   @param maxSize 指定的大小（以字节为单位）。
+   @return 是否成功
+ */
+- (BOOL)removeItemsToFitSize:(int)maxSize;
+
+/**
+   删除项目使总count不大于指定的计数。
+   最近最少使用的(LRU)项目将首先被删除。
+  
+   @param maxCount 指定的项目数。
+   @return 是否成功
+ */
+- (BOOL)removeItemsToFitCount:(int)maxCount;
+
+/**
+   删除所有项目在后台队列中.
+  
+   @discussion 此方法将文件和sqlite数据库删除到垃圾文件夹，然后在后台队列中清除该文件夹。 所以这个方法比`removeAllItemsWithProgressBlock：endBlock：`快得多。
+  
+   @return 是否成功
+ */
+- (BOOL)removeAllItems;
+
+/**
+   删除所有项目。
+  
+   @warning 您不应该在这些块中向此实例发送消息。
+   @param progress 这个块将在删除期间被调用，通过nil来忽略。
+   @param end 这个块将在末尾被调用，通过nil来忽略。
+ */
+- (void)removeAllItemsWithProgressBlock:(nullable void(^)(int removedCount, int totalCount))progress
+                               endBlock:(nullable void(^)(BOOL error))end;
 
 
+#pragma mark - Get Items
+/**
+   使用指定键去获取item
+  
+   @param key 指定的key.
+ */
+- (nullable YYKVStorageItem *)getItemForKey:(NSString *)key;
+
+/**
+   使用指定键去获取item information.
+   item中的`value`将被忽略。
+  
+   @param key 指定的key.
+ */
+- (nullable YYKVStorageItem *)getItemInfoForKey:(NSString *)key;
+
+/**
+   使用指定的key去获取item value.
+  
+   @param key 指定的key
+   @return Item的value，如果不存在或发生错误,则为nil.
+ */
+- (nullable NSData *)getItemValueForKey:(NSString *)key;
+
+
+- (nullable NSArray<YYKVStorageItem *> *)getItemForKeys:(NSArray<NSString *> *)keys;
+
+- (nullable NSArray<YYKVStorageItem *> *)getItemInfoForKeys:(NSArray<NSString *> *)keys;
+
+/**
+   通过一系列keys获取item value。
+  
+   @param keys 指定kyes的数组。
+   @return 一个字典，该键是“key”，值是“value”.
+ */
+- (nullable NSDictionary<NSString *, NSData *> *)getItemValueForKeys:(NSArray<NSString *> *)keys;
+
+#pragma mark - Get Storage Status
+/**
+   是否存在指定key的item.
+  
+   @param key 指定的key.
+ */
+- (BOOL)itemExistsForKey:(NSString *)key;
+
+/**
+   获取总的item count.
+ 
+   @return 总计数，发生错误时返回-1.
+ */
+- (int)getItemsCount;
+
+/**
+   获取item value的总大小（以字节为单位）.
+   @return 总大小（以字节计），发生错误时为-1。
+ */
+- (int)getItemsSize;
 
 
 @end

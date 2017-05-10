@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "YYWebImageManager.h"
-
+#import <pthread.h>
 NS_ASSUME_NONNULL_BEGIN
 
 /**

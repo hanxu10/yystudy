@@ -6,10 +6,10 @@
 //  Copyright © 2017年 hanxu. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@class YYWebImageOperation;
+@class YYWebImageOperation,YYImageCache;
 
 /// The options to control image operation.
 typedef NS_OPTIONS(NSUInteger, YYWebImageOptions) {
@@ -41,9 +41,9 @@ typedef NS_ENUM(NSUInteger, YYWebImageFromType) {
 
 ///指示图像提取完成阶段。
 typedef NS_ENUM(NSInteger, YYWebImageStage) {
-    YYWebImageStageProgress  = -1,/// 未完成, progressive image.
-    YYWebImageStageCancelled = 0,/// 取消了
-    YYWebImageStageFinished  = 1,/// 完成了 (成功或者失败).
+    YYWebImageStageProgress  = -1,///< 未完成, progressive image.
+    YYWebImageStageCancelled = 0,///< 取消了
+    YYWebImageStageFinished  = 1,///< 完成了 (成功或者失败).
 };
 
 /**
